@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <!-- A-FrameをCDNから読み込む -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <!-- aframe-orbit-controlsをCDNから読み込む -->
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+<body>
+  <a-scene>
+    <!-- orbit-controls -->
+    <a-entity 
+      camera 
+      orbit-controls="target: 0 0 0; maxPolarAngle:180; minDistance: 0.5; maxDistance: 200; initialPosition: 0 0 10; dampingFactor: 0.5; rotateSpeed: 1; enablePan: false">
+    </a-entity>
+    
+    <!-- 3Dモデル -->
+    <a-gltf-model id="testModel" src="FirstPersonMap.gltf" position="0 0 0" rotation="0 0 0" scale="1 1 1" animation-mixer="clip: *"></a-gltf-model>
+    
+    <!-- 背景色 -->
+    <a-sky color="#009b4a"></a-sky>
+  </a-scene>
+
+  
+</body>
+</html>
